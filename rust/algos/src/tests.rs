@@ -48,3 +48,10 @@ fn binary_search_test_4(){
     let result = binary_search(&vector, 2);
     assert!(result.is_none());
 }
+
+#[test]
+fn binary_search_test_5(){
+    let vector = vec![0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16];
+    let result = binary_search(&vector, 16);
+    assert_eq!(result.unwrap(), 16);
+}

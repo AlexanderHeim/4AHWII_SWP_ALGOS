@@ -39,10 +39,8 @@ fn binary_search(vector: &Vec<i32>, number: i32) -> Option<usize> {
             r = m-1;
             continue;
         }
-
-        if vector[m] == number {
-            return Some(m)
-        }
+        
+        return Some(m)
         
     }
 }

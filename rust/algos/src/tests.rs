@@ -1,4 +1,4 @@
-use super::*;
+use crate::search::*;
 
 #[test]
 fn sequencial_search_test_1(){

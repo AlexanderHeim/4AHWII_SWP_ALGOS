@@ -4,6 +4,7 @@
 mod tests;
 mod search;
 mod recursion;
+mod sort;
 
 use recursion::*;
 

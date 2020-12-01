@@ -1,5 +1,6 @@
 use crate::search::*;
 use crate::recursion::*;
+use crate::sort::*;
 
 #[test]
 fn sequencial_search_test_1(){
@@ -95,4 +96,21 @@ fn fibonacci_test_7(){
 #[test]
 fn fibonacci_test_8(){
     assert_eq!(fibonacci(75), 2111485077978050);
+}
+
+#[test]
+fn bubble_sort_test_1() {
+    let mut vector: Vec<u32> = Vec::new();
+    vector.push(3);
+    vector.push(7);
+    vector.push(1);
+    vector.push(5);
+    vector.push(6);
+    bubble_sort(&mut vector);
+    for i in 0..vector.len()-1 {
+        if vector[i] > vector[i+1] {
+            assert_eq!(1, 0);
+        }
+    }
+    assert_eq!(0, 0);
 }

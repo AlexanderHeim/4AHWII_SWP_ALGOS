@@ -8,7 +8,7 @@ The relevant code is located in "/rust/algos/src/".
 ### main.rs
 The main function in main.rs acts as the entry point on execution of the compiled binary.
 The main function is most likely used as a temporary testing-tool and not that important.
-The remaining code in main.rs is just basic Rust-environment related code, to make the pmodule system aware of it's different modules ("classes").
+The remaining code in main.rs is just basic Rust-environment related code, to make the module system aware of it's different modules.
 
 ### recursion.rs
 Located in this module are very basic implementations of recursive algorithms, such as (and currently only) an algorithm that calculates the fibonacci sequence.

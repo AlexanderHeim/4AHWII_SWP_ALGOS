@@ -1,5 +1,5 @@
 use std::time::{Duration};
-use rand::{Rng, distributions::Uniform, prelude::ThreadRng};
+use rand::distributions::Uniform;
 use rand::distributions::Distribution;
 use clap::{Arg,App};
 
@@ -87,7 +87,7 @@ pub fn main() {
     }
 
     println!("-------------------- BENCHING --------------------");
-    let mut batch = random_vec_batch(amount, length);
+    let batch = random_vec_batch(amount, length);
     println!("Benching with {} random i32 vectors of length {}\n", batch.len(), batch[0].len());
     
     println!("Benching Bubble Sort..");

@@ -215,3 +215,39 @@ fn insertion_sort_bin_test_5() {
     insertion_sort_bin(&mut to_sort);
     assert!(true);
 }
+
+#[test]
+fn selection_sort_test_1() {
+    let mut to_sort: [i32; 5] = [10, 3, 32, 2, 2];
+    selection_sort(&mut to_sort);
+    for x in 0..to_sort.len()-1 {
+        if to_sort[x] > to_sort[x+1] {
+            assert!(false);
+        }
+    }
+    assert!(true);
+}
+
+#[test]
+fn selection_sort_test_2() {
+    let mut to_sort: [i32; 5] = [0, 1, 2, 3, 1];
+    selection_sort(&mut to_sort);
+    for x in 0..to_sort.len()-1 {
+        if to_sort[x] > to_sort[x+1] {
+            assert!(false);
+        }
+    }
+    assert!(true);
+}
+
+#[test]
+fn selection_sort_test_3() {
+    let mut to_sort: [i32; 10] = [0, 10, 2, 4, 8, 0, 2, 9, 11, 203];
+    selection_sort(&mut to_sort);
+    for x in 0..to_sort.len()-1 {
+        if to_sort[x] > to_sort[x+1] {
+            assert!(false);
+        }
+    }
+    assert!(true);
+}

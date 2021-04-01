@@ -1,7 +1,5 @@
-use crate::search::binary_search;
-
 pub fn bubble_sort<T: std::cmp::Ord>(to_sort: &mut [T]) {
-    let mut swapped: bool = false;
+    let mut swapped;
     loop {
         swapped = false;
         for i in 0..to_sort.len()-1 {
@@ -40,7 +38,6 @@ pub fn insertion_sort_bin<T: std::cmp::Ord>(to_sort: &mut [T]) {
 
             m = ((l+r)/2) as i32;
 
-            println!("M: {}", m);
             if l > r {
                 break;
             }
@@ -66,5 +63,18 @@ pub fn insertion_sort_bin<T: std::cmp::Ord>(to_sort: &mut [T]) {
         for y in (m+1..x as i32).rev() {
             to_sort.swap(y as usize, (y+1) as usize);
         }
+    }
+}
+
+// Implementation of selection Sort
+pub fn selection_sort<T: std::cmp::Ord>(to_sort: &mut [T]) {
+    for i in 0..to_sort.len() {
+        let mut lowest = i;
+        for j in i..to_sort.len() {
+            if to_sort[j] < to_sort[lowest] {
+                lowest = j;
+            } 
+        }
+        to_sort.swap(i, lowest);
     }
 }

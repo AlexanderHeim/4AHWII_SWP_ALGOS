@@ -21,3 +21,6 @@ This module contains implementations of various sorting-algorithms.
 
 ### test.rs
 "test.rs" contains unit tests, which test the functionality of my implementations. They ensure that my code is working as intended, which is **really** important.
+
+### bench
+In bench all the benchmarking stuff is being done.
